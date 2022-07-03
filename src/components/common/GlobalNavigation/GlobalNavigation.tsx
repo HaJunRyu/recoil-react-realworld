@@ -1,35 +1,38 @@
+import { Link } from 'react-router-dom';
+import { route } from '../../../constants/route';
+
 function GlobalNavigation() {
   return (
     <nav className="navbar navbar-light">
       <div className="container">
-        <a className="navbar-brand" href="index.html">
+        <Link className="navbar-brand" to={route.HOME}>
           conduit
-        </a>
+        </Link>
         <ul className="nav navbar-nav pull-xs-right">
           <li className="nav-item">
-            <a className="nav-link active" href="">
+            <Link className="nav-link active" to={route.HOME}>
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="">
+            <Link className="nav-link" to={route.EDITOR}>
               <i className="ion-compose"></i>&nbsp;New Article
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="">
+            <Link className="nav-link" to={route.SETTINGS}>
               <i className="ion-gear-a"></i>&nbsp;Settings
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="">
+            <Link className="nav-link" to={route.LOGIN}>
               Sign in
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="">
+            <Link className="nav-link" to={route.REGISTER}>
               Sign up
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
